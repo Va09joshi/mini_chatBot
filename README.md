@@ -1,4 +1,4 @@
-<h1 align="center">🤖 Gemini ChatBot App</h1>
+<h1 align="center">🤖  VBot - Ultimate Ai App</h1>
 
 <p align="center">
   A beautiful AI-powered chatbot built with <strong>Flutter</strong> using the <strong>Gemini API</strong>, <strong>GetX</strong> for state management, and <strong>Chat Bubbles</strong> for sleek UI.
@@ -25,13 +25,6 @@
 
 ---
 
-<h2>📱 Screenshots</h2>
-
-<p align="center">
-  <img src="https://i.imgur.com/v1N1rTn.png" width="200" />
-  <img src="https://i.imgur.com/D2v2z3v.png" width="200" />
-  <img src="https://i.imgur.com/3eHLovv.png" width="200" />
-</p>
 
 ---
 
@@ -54,6 +47,7 @@
 git clone https://github.com/your-username/gemini-chatbot-flutter.git
 cd gemini-chatbot-flutter
 flutter pub get
+```
 
 <h2>🔑 Setup Gemini API Key</h2>
 Visit <a href="https://makersuite.google.com/app/apikey" target="_blank">Gemini API Key Page</a>
@@ -62,7 +56,48 @@ Generate an API key.
 
 Create a file: lib/constant/api_constants.dart:
 
+```
 <h2>📂 Folder Structure</h2>
-plaintext
-Copy
-Edit
+
+lib/
+├── controller/
+│   └── message_controller.dart
+├── screens/
+│   └── chat_screen.dart
+├── constant/
+│   └── api_constants.dart
+├── main.dart
+```
+```
+<h2>🧠 Example Gemini API Call</h2>
+
+final response = await http.post(
+  Uri.parse("${ApiContant.baseUrl}${ApiContant.apiKey}"),
+  headers: {'Content-Type': 'application/json'},
+  body: jsonEncode({
+    "contents": [
+      {
+        "parts": [{"text": message}]
+      }
+    ]
+  }),
+);
+
+```
+
+<h2>💡 UI Highlights</h2>
+
+- Gradient AppBar
+
+- Floating action button to send messages
+
+- Animated chat bubbles
+
+- Responsive layout
+
+- Modern fonts and icons
+
+<h2>🤝 Contributing</h2>
+Contributions are welcome! If you find a bug or have a feature request, feel free to open an issue or a pull request.
+
+
